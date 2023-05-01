@@ -5,7 +5,7 @@ using UnityEngine;
 public class Platform_Propertile : MonoBehaviour
 {
     public Transform cam;
-    public float jumpForce = 40f; 
+    public float jumpForce = 40f;
     public bool move = false;
     public float speed = 5f;
     bool direction = false;
@@ -36,12 +36,18 @@ public class Platform_Propertile : MonoBehaviour
         if (collision.relativeVelocity.y <= 0f)
         {
             Rigidbody2D rb = collision.collider.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            if (rb != null && collision.collider.tag == "Player")
             {
                 Vector2 velocity = rb.velocity;
                 velocity.y = jumpForce;
                 rb.velocity = velocity;
             }
-        }       
+            else if (rb != null && collision.collider.tag == "Monster")
+            {
+                Vector2 velocity = rb.velocity;
+                velocity.y = 5f;
+                rb.velocity = velocity;
+            }
+        }
     }
 }
