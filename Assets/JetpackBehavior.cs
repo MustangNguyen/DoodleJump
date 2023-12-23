@@ -9,6 +9,8 @@ public class JetpackBehavior : MonoBehaviour
     private Transform parentTransform;
     GameObject doodle;
     Rigidbody2D rb;
+    BoxCollider2D bc;
+
     float rotatez;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,8 @@ public class JetpackBehavior : MonoBehaviour
         rb=doodle.GetComponent<Rigidbody2D>();
         rb.gravityScale = -3;
         StartCoroutine(WaitForFunction());
+        bc = doodle.GetComponent<BoxCollider2D>();
+        bc.enabled = false;
     }
 
     IEnumerator WaitForFunction()
@@ -38,6 +42,7 @@ public class JetpackBehavior : MonoBehaviour
         //Debug.Log(velocity.magnitude);
         if (rb.velocity.y < 1f && rb.velocity.y > -1f && transform.parent != null) 
         {
+            bc.enabled = true;
             isAttach = false;
             transform.SetParent(null);
             Rigidbody2D rb2 = GetComponent<Rigidbody2D>();

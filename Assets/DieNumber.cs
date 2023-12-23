@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
 public class DieNumber : MonoBehaviour
 {
     // Start is called before the first frame update

@@ -6,19 +6,22 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
-      flags: 0
-    RecentlyUsedSceneGuid-1:
       value: 5a550d0701560d095408542615745e44404f4d73742b75367a714e30e0b23160
       flags: 0
+    RecentlyUsedSceneGuid-1:
+      value: 515250075c0c595e5f5a5e71122159444e4e4a2f7a7d7f602f284d66b4b76661
+      flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 00050c5354075f590f5e0a2313275a4440151a79797d71317c284e64b2b2353b
+      value: 0652570007545b0a0c0b5e7448750f4447151a2c2e787f647e7d4b60e0b9373c
       flags: 0
     RecentlyUsedSceneGuid-3:
-      value: 0652570007545b0a0c0b5e7448750f4447151a2c2e787f647e7d4b60e0b9373c
+      value: 00050c5354075f590f5e0a2313275a4440151a79797d71317c284e64b2b2353b
       flags: 0
     RecentlyUsedSceneGuid-4:
       value: 075304005c545f035b595e761222074445164d79287875687f2d4b62e7e6653a
+      flags: 0
+    UIBuilder.DisableMouseWheelZooming:
+      value: 2550581500
       flags: 0
     UIBuilder.EditorExtensionModeKey:
       value: 37434103

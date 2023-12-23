@@ -10,6 +10,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject platformUnstable;
     public GameObject platformTinyBoost;
     public GameObject platformRocket;
+    public GameObject platformMonster1;
     public float levelWidth = 7f;
     public float minY = 1.2f;
     public float maxY = 3.5f;
@@ -19,40 +20,6 @@ public class LevelGenerator : MonoBehaviour
 
     Vector3 spawnPosition = new Vector3(0, -6, 0);
 
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    Vector3 spawnPosition = new Vector3();
-    //    for (int i = 0; i < numberOfPlatforms; i++)
-    //    {
-    //        spawnPosition.y += Random.Range(minY, maxY);
-    //        spawnPosition.x = Random.Range(-levelWidth, levelWidth);
-    //        //Create platform randomly
-    //        int r = Random.Range(1, 100);
-    //        if (r == 1 || r == 2 || r == 3 || r == 4 || r == 5 || r == 6 || r == 7 || r == 8 || r == 9 || r == 10)
-    //        {
-    //            Instantiate(platformBoost, spawnPosition, Quaternion.identity);
-    //        }
-    //        else if (r == 11 || r == 12 || r == 13 || r == 14 || r == 15)
-    //        {
-    //            Instantiate(platformUnstable, spawnPosition, Quaternion.identity);
-    //        }
-    //        else
-    //        {
-    //            Instantiate(platformNormal, spawnPosition, Quaternion.identity);
-    //        }
-    //        //Make game become harder when going higher
-    //        if (maxY < 3)
-    //        {
-    //            maxY += 0.005f;
-    //        }
-    //        if (minY < maxY)
-    //        {
-    //            minY += 0.005f;
-    //        }
-    //    }
-
-    //}
 
 
     void Start()
@@ -88,6 +55,10 @@ public class LevelGenerator : MonoBehaviour
                 {
                     Instantiate(platformRocket, spawnPosition, Quaternion.identity);
                 }
+                else if (0.26 < r && r <= 0.28)
+                {
+                    Instantiate(platformMonster1, spawnPosition, Quaternion.identity);
+                }
                 else
                 {
                     Instantiate(platformNormal, spawnPosition, Quaternion.identity);
@@ -118,6 +89,14 @@ public class LevelGenerator : MonoBehaviour
                     else if (0.25 < r && r <= 0.26)
                     {
                         Instantiate(platformRocket, spawnPosition, Quaternion.identity);
+                    }
+                    else if (0.25 < r && r <= 0.26)
+                    {
+                        Instantiate(platformRocket, spawnPosition, Quaternion.identity);
+                    }
+                    else if (0.27 < r && r <= 0.30)
+                    {
+                        Instantiate(platformMonster1, spawnPosition, Quaternion.identity);
                     }
                     else
                     {
@@ -150,11 +129,11 @@ public class LevelGenerator : MonoBehaviour
                         platformTinyBoost.GetComponent<Platform_Propertile>().move = false;
                         h += LevelAjust;
                     }
-                    else if (0.25 < r && r <= 0.26)
+                    else if (0.27 < r && r <= 0.30)
                     {
-                        platformRocket.GetComponent<Platform_Propertile>().move = true;
-                        Instantiate(platformRocket, spawnPosition, Quaternion.identity);
-                        platformRocket.GetComponent<Platform_Propertile>().move = false;
+                        platformMonster1.GetComponent<Platform_Propertile>().move = true;
+                        Instantiate(platformMonster1, spawnPosition, Quaternion.identity);
+                        platformMonster1.GetComponent<Platform_Propertile>().move = false;
                     }
                     else
                     {
